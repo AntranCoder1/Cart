@@ -96,15 +96,86 @@ export class DataProvider extends Component {
                 "desc": "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.",
                 "count": 1
             }
-        ]
+        ],
+        cart: [],
+        total: 0
+    }
+
+    addCart = (id) => {
+        const { products, cart } = this.state;
+        const check = cart.every(item => {
+            return item.id !== id; 
+        });
+        if (check) {
+            const data = products.filter(item => {
+                return item.id === id;
+            })
+            this.setState({
+                cart: [...cart, ...data]
+            })
+        } else {
+            alert("The product has been added to cart.");
+        }
+    }
+
+    decrease = id => {
+        const { cart } = this.state;
+        cart.forEach(item => {
+            if (item.id === id) {
+                item.count === 1 ? item.count = 1 : item.count -= 1;
+            }
+        })
+        this.setState({
+            cart: cart
+        })
+        this.getTotal();
+    }
+
+    increase = id => {
+        const { cart } = this.state;
+        cart.forEach(item => {
+            if (item.id === id) {
+                item.count += 1;
+            }
+        })
+        this.setState({
+            cart: cart
+        })
+        this.getTotal();
+    }
+
+    removeProduct = id => {
+        if (window.confirm("Do you want to delete this products?")) {
+            const { cart } = this.state;
+            cart.forEach((item, index) => {
+                if (item.id === id) {
+                    cart.splice(index, 1);
+                }
+            })
+            this.setState({
+                cart: cart
+            })
+            this.getTotal();
+        }
+    }
+
+    getTotal = () => {
+        const { cart } = this.state;
+        const res = cart.reduce((acc, val) => {
+            return acc + (val.price * val.count)
+        }, 0);
+        this.setState({
+            total: res
+        })
     }
 
     render() {
 
-        const  { products } = this.state;
+        const  { products, cart, total } = this.state;
+        const { addCart, decrease, increase, removeProduct, getTotal } = this;
 
         return(
-            <DataContext.Provider value={{products}}>
+            <DataContext.Provider value={{products, cart, addCart, decrease, increase, removeProduct, getTotal, total}}>
                 {this.props.children}
             </DataContext.Provider>
         )

@@ -28,7 +28,7 @@ export class Products extends Component {
                                         </h3>
                                         <span class="menu_detail">{item.desc}</span>
                                         <span class="menu_price">${item.price}</span>
-                                        <Link to="" class="button menu_button">
+                                        <Link to="/cart" class="button menu_button" onClick={() => this.context.addCart(item.id)}>
                                             <i class="bx bx-cart-alt"></i>
                                         </Link>
                                     </div>

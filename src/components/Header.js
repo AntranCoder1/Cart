@@ -12,7 +12,11 @@ import { Link } from "react-router-dom";
 import './css/Header.css';
 import Cart from './svg/shopping-cart-solid.svg';
 
+import { DataContext } from "./Context";
+
 export class Header extends Component {
+
+    static contextType = DataContext;
 
     state = {
         isOpen: false
@@ -25,6 +29,9 @@ export class Header extends Component {
     }
 
     render() {
+
+        const { cart } = this.context;
+
         return(
             <div>
                 <Navbar color="light" light expand="md">
@@ -45,7 +52,7 @@ export class Header extends Component {
                             <NavItem>
                                 <NavLink className="li">
                                     <div className="nav-cart">
-                                        <span>0</span>
+                                        <span>{cart.length}</span>
                                         <Link to="/cart">
                                             <img src={Cart} alt="" width="20" />
                                         </Link>
