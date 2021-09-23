@@ -1,0 +1,26 @@
+.logo {
+    margin-left: 10rem;
+    text-transform:  uppercase;
+}
+
+.li a {
+    text-decoration:  none;
+    
+}
+
+.li .nav-cart {
+    position: relative;
+    cursor: pointer;
+}
+
+.li .nav-cart span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: crimson;
+    font-size: 10px;
+    color: #fff;
+    padding: 3px 5px;
+    border-radius: 50%;
+    z-index: 1;
+}
