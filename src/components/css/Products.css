@@ -132,6 +132,7 @@ img {
    color: var(--first-color);
    font-weight: var(--font-medium);
    margin-bottom: var(--mb-1);
+   margin-top: -6rem;
 }
 
 /*============== LAYOUT ==============*/
@@ -270,6 +271,11 @@ img {
     font-size: var(--normal-font-size);
 }
 
+.menu_name a {
+    text-decoration:  none;
+    color: #333;
+}
+
 .menu_detail,
 .menu_price {
     font-size: var(--small-font-size);
@@ -319,6 +325,7 @@ img {
     font-size: var(--h3-font-size);
     color: var(--first-color);
     font-weight: var(--font-semi-bold);
+    text-decoration: none;
 }
 
 .footer_description {
@@ -343,6 +350,7 @@ img {
     display: inline-block;
     color: var(--text-color);
     margin-bottom: var(--mb-1);
+    text-decoration: none;
 }
 
 .footer_link:hover {
@@ -615,6 +623,14 @@ span {
 
     .menu_content {
         padding: 1.5rem;
+    }
+
+    .menu_content a {
+        text-decoration: none;
+    }
+
+    .menu_content a:hover {
+        color: #fff;
     }
 
     .menu_img {

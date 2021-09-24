@@ -40,21 +40,21 @@ export class Products extends Component {
                 <section className="footer section bd-container">
                     <div className="footer_container bd-grid">
                         <div className="footer_content">
-                            <a href="#" className="footer_logo">Tasty Food</a>
+                            <Link to="/" className="footer_logo">Tasty Food</Link>
                             <span className="footer_description">Restaurant</span>
 
                             <div>
-                                <a href="#" className="footer_social">
+                                <Link to="#" className="footer_social">
                                     <i className="bx bxl-facebook"></i>
-                                </a>
+                                </Link>
 
-                                <a href="#" className="footer_social">
+                                <Link to="#" className="footer_social">
                                     <i className="bx bxl-instagram"></i>
-                                </a>
+                                </Link>
 
-                                <a href="#" className="footer_social">
+                                <Link to="#" className="footer_social">
                                     <i className="bx bxl-twitter"></i>
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
@@ -62,19 +62,19 @@ export class Products extends Component {
                             <h3 className="footer_title">Services</h3>
                             <ul>
                                 <li>
-                                    <a href="#" className="footer_link">Delivery</a>
+                                    <Link to="#" className="footer_link">Delivery</Link>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="footer_link">Pricing</a>
+                                    <Link to="#" className="footer_link">Pricing</Link>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="footer_link">Fast Food</a>
+                                    <Link to="#" className="footer_link">Fast Food</Link>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="footer_link">Reserve your spot</a>
+                                    <Link to="#" className="footer_link">Reserve your spot</Link>
                                 </li>
                             </ul>
                         </div>
@@ -83,19 +83,19 @@ export class Products extends Component {
                             <h3 className="footer_title">Information</h3>
                             <ul>
                                 <li>
-                                    <a href="#" className="footer_link">Event</a>
+                                    <Link to="#" className="footer_link">Event</Link>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="footer_link">Contact us</a>
+                                    <Link to="#" className="footer_link">Contact us</Link>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="footer_link">Privacy policy</a>
+                                    <Link to="#" className="footer_link">Privacy policy</Link>
                                 </li>
 
                                 <li>
-                                    <a href="#" className="footer_link">Terms of services</a>
+                                    <Link to="#" className="footer_link">Terms of services</Link>
                                 </li>
                             </ul>
                         </div>
