@@ -111,7 +111,7 @@ export class Products extends Component {
                         </div>
                     </div>
 
-                    <p className="footer_copy">&#169; 2021 Allgrowlabo Inc. All right reserved.</p>
+                    <p className="footer_copy">&#169; 2021 TRAN THANH AN. All right reserved.</p>
                 </section>
             </main>
         )
